@@ -1,0 +1,267 @@
+.footer {
+  padding-top: 81px;
+  padding-bottom: 60px;
+
+  @include tablet {
+    background-color: var(--color-main-bg);
+  }
+
+  @include mobile-m {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  @include mobile-s {
+    padding-top: 11px;
+  }
+
+  &__container {
+    padding-right: 60px;
+    padding-left: 60px;
+
+    @include tablet {
+      background-color: var(--color-main-bg);
+    }
+
+    @include mobile-m {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+
+    @include mobile-s {
+      padding-right: 24px;
+      padding-left: 24px;
+    }
+
+    @include mobile-xs {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 47px;
+    border-bottom: 1px solid rgba(19, 19, 19, 0.16);
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    @include mobile-m {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__left {
+    width: 100%;
+    max-width: 292px;
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 53px;
+    }
+  }
+
+  .logo {
+    display: block;
+    margin-bottom: 24px;
+    padding-top: 6px;
+
+    img {
+      @include mobile-s {
+        width: 100%;
+        max-width: 108px;
+      }
+    }
+
+    @include mobile-s {
+      margin-bottom: 16px;
+      padding-top: 0;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -0.01em;
+    color: rgba(19, 19, 19, 0.6);
+
+    @include mobile-s {
+      font-size: 12px;
+      max-width: 216px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    margin-right: -4px;
+    width: 100%;
+    max-width: 580px;
+
+    @include tablet {
+      justify-content: space-between;
+      max-width: unset;
+    }
+
+    @include mobile-m {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__list-inner {
+    width: 100%;
+    max-width: 152px;
+
+    &--order-one {
+      @include mobile-m {
+        order: 0;
+      }
+    }
+
+    &--order-two {
+      @include mobile-m {
+        order: 1;
+      }
+    }
+
+    &--order-three {
+      @include mobile-m {
+        order: 2;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include mobile-s {
+        margin-right: 0;
+      }
+    }
+
+    &:first-child {
+      @include mobile-s {
+        margin-right: 65px;
+      }
+    }
+
+    @include mobile-m {
+      margin-bottom: 48px;
+    }
+
+    @include mobile-s {
+      margin-bottom: 40px;
+    }
+
+    @include mobile-s {
+      max-width: 142px;
+    }
+
+    &--order-two {
+      @include mobile-s {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 33px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color-footer-dark);
+
+    @include mobile-s {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    color: rgba(19, 19, 19, 0.6);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-btn);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 48px;
+
+    @include mobile-l {
+      flex-wrap: wrap;
+    }
+
+    @include mobile-m {
+      padding-top: 0;
+    }
+  }
+
+  &__copyright {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: -0.01em;
+    color: var(--color-footer-dark);
+
+    @include mobile-l {
+      order: 1;
+    }
+
+    @include mobile-s {
+      margin-top: 6px;
+      font-size: 12px;
+    }
+  }
+
+  &__privacy-inner {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    max-width: 323px;
+    line-height: 2;
+    letter-spacing: -0.01em;
+
+    @include mobile-l {
+      margin-bottom: 32px;
+    }
+
+    @include mobile-s {
+      margin-top: -7px;
+      margin-bottom: 18px;
+      font-size: 12px;
+    }
+  }
+
+  &__privacy-link,
+  &__terms-link {
+    color: var(--color-footer-dark);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-nepal);
+    }
+  }
+}

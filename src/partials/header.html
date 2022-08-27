@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="header__left-side">
+      <a class="logo" href="#">
+        <img src="img/logo.svg" width="148" alt="site logo">
+      </a>
+      <div class="header__search-inner">
+        <label class="header__search">
+          <input class="header__search-input" type="search" placeholder="Search something here">
+          <button class="header__search-setting-btn btn-reset" type="button"
+            aria-label="search settings button in the search box"></button>
+        </label>
+      </div>
+    </div>
+    <div class="header__right-side">
+      <nav class="header__nav">
+        <ul class="header__nav-list list-reset">
+          <li class="header__user-item">
+            <a class="header__user-btn header__user-btn--favorite" aria-label="link-button to go to favorites"
+              href="#"></a>
+          </li>
+          <li class="header__user-item">
+            <button type="button"
+              class="header__user-btn header__user-btn--notification btn-reset btn btn-primary position-relative"
+              aria-label="button to go to notifications">
+              <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+              </span>
+            </button>
+          </li>
+          <li class="header__user-item">
+            <a class="header__user-btn header__user-btn--settings" aria-label="link-button to go to settings"
+              href="#"></a>
+          </li>
+        </ul>
+        <button class="hamburger hamburger--elastic" type="button"
+          aria-label="menu button to open additional sections of site navigation" aria-controls="navigation">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <a class="header__user-cabinet" href="#"
+          aria-label="link-button to go to the personal account with the user's image">
+          <picture>
+            <source srcset="img/user-profile.avif" type="image/avif">
+            <source srcset="img/user-profile.webp" type="image/webp">
+            <source srcset="img/user-profile.jpg">
+            <img class="header__user-photo" src="img/user-profile.png" width="44" loading="lazy"
+              alt="personal account - user photo">
+          </picture>
+        </a>
+      </nav>
+    </div>
+  </div>
+</header>

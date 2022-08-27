@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+
+      <div class="main-inner">
+        <h1 class="visually-hidden">MORENT - Car rRent</h1>
+        <div class="main-inner__wrapper">
+          <div class="main-left">
+            @include('partials/filters.html')
+          </div>
+          <div class="main-right container-small">
+            @include('partials/hero.html')
+            @include('partials/reviews.html')
+            @include('partials/recent.html')
+          </div>
+        </div>
+      </div>
+
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

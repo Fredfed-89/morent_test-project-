@@ -1,0 +1,211 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  font-family: var(--font-family, sans-serif);
+  position: relative;
+  margin: 0;
+  font-weight: 400;
+  font-style: normal;
+  min-width: 320px;
+  min-height: 100%;
+  color: var(--color-text);
+  background-color: var(--color-white);
+}
+
+.main-inner {
+  margin: 0 auto;
+  max-width: 1440px;
+
+  &__wrapper {
+    display: flex;
+  }
+}
+
+.main-right {
+  background-color: var(--color-main-bg);
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.is-hidden {
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+  max-width: 1440px;
+
+  @include mobile-m {
+    padding: 0 23px;
+  }
+
+  @include mobile-xs {
+    padding: 0 15px;
+  }
+}
+
+.container-small {
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+  max-width: 1080px;
+
+  @include mobile-m {
+    padding: 0 23px;
+  }
+
+  @include mobile-xs {
+    padding: 0 15px;
+  }
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.btn-favorite {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/favorite-heart-empty-icon.svg");
+}
+
+.btn-favorite-full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/favorite-heart-icon.svg");
+}
+
+.star-rating {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 20px;
+    height: 20px;
+
+    &:not(:last-child) {
+      margin-right: 2px;
+
+      @include mobile-s {
+        margin-right: 4px;
+      }
+    }
+
+    svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+
+      @include mobile-s {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    @include mobile-s {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}
