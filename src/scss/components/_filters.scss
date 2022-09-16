@@ -179,8 +179,9 @@
     opacity: 1;
   }
 
+  // отмеченные фильтра отключил
   &__input-type--checked::after {
-    opacity: 1;
+    // opacity: 1;
   }
 
   &__input-type {
